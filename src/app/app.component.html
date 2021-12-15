@@ -1,24 +1,2 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="./app.component.css">
-   <title>Goals</title>
- </head>
- <body>
-   <div>
-    <h1>My Goals</h1>
-    <hr>
-    <ul>
-        <li *ngFor='let goal of goals'>
-          {{goal.name}}
-        </li>
-    </ul>
-    <p *ngIf='goals.length > 5'>Your goals are too many</p>
-  </div>
-    <router-outlet></router-outlet>
- </body>
- </html>
+<app-quote></app-quote>
  

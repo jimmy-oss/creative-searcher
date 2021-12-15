@@ -1,0 +1,19 @@
+body{
+  background-image: url('./images/background.jpg');
+  background-size: cover;
+  height: 100vh;
+}
+h1{
+  text-align: center;
+}
+li{
+  color: rgb(60, 255, 245);
+  text-shadow: 1px 1px black;
+  font-size: 18px;
+  list-style: none;
+}
+p{
+  color: rgb(60, 255, 245);
+  text-shadow: 1px 1px black;
+  font-size: 18px;
+}

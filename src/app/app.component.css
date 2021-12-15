@@ -1,15 +1,1 @@
-body{
-  background-image: url('../assets/images/background.jpg');
-  background-size: cover;
-  height: 100vh;
-}
-li{
-  color: rgb(60, 255, 245);
-  text-shadow: 1px 1px black;
-  font-size: 18px;
-}
-p{
-  color: rgb(60, 255, 245);
-  text-shadow: 1px 1px black;
-  font-size: 18px;
-}
+ 
