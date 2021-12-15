@@ -12,13 +12,14 @@
     <h1>My Goals</h1>
     <hr>
     <ul>
-      <li *ngFor='let goal of goals'>
-        {{goal.name}}
-        <app-quote-detail [quote]='goal'></app-quote-detail>
-      </li>
+      <div *ngFor='let goal of goals;let i = index'>
+        <li>{{goal.name}}</li>
+        <button (click)='toggleDetails(i)' class="btn btn-primary">Show Details</button>
+        <app-quote-detail *ngIf='goal.showDescription' [quote]='goal'></app-quote-detail>
+      </div>
     </ul>
+    <p *ngIf='goals.length > 5'>You have too many goals</p>
   </div>
-   <router-outlet></router-outlet>
 </body>
 </html>
 
