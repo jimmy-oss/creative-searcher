@@ -8,10 +8,17 @@
    <title>Goals</title>
  </head>
  <body>
-   <h1>my goals</h1>
+   <div>
+    <h1>My Goals</h1>
+    <hr>
     <ul>
-     <li *ngFor='let goal of goals'>{{goals}}</li>
+        <li *ngFor='let goal of goals'>
+          {{goal.name}}
+        </li>
     </ul>
+    <p *ngIf='goals.length > 5'>Your goals are too many</p>
+  </div>
+    <router-outlet></router-outlet>
  </body>
  </html>
-<router-outlet></router-outlet>
+ 
