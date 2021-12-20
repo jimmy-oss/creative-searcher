@@ -4,7 +4,8 @@
 body{
   background-image: url('./images/background.jpg');
   background-size: cover;
-  height: 100vh;
+  height: 100vh; 
+ 
 }
 h1{
   text-align: center;
@@ -19,6 +20,7 @@ p{
   color: rgb(60, 255, 245);
   text-shadow: 1px 1px black;
   font-size: 20px;
+   
 }
 app-quote-detail{
   color: aquamarine;
