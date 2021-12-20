@@ -8,12 +8,12 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   goals:Quote[] = [
-    new Quote(1, 'Watch finding Nemo', 'Find an online version and watch merlin find his son'),
-    new Quote(2,'Buy Cookies','I have to buy cookies for the parrot'),
-    new Quote(3,'Get new Phone Case','Diana has her birthday coming up soon'),
-    new Quote(4,'Get Dog Food','Pupper likes expensive snacks'),
-    new Quote(5,'Solve math homework','Damn Math'),
-    new Quote(6,'Plot my world domination plan','Cause I am an evil overlord'),
+    new Quote(1, 'Dwell on the beauty of life', 'Watch the stars, and see yourself running with them.Marcus Aurelius',),
+    new Quote(2,'Nothing is impossible', 'The word itself says ‘I’m possible’!” Audrey Hepburn'),
+    new Quote(3,'Courage doesn’t always roar', 'Sometimes courage is the little voice at the end of the day that says ‘I’ll try again tomorrow. Mary Anne Radmacher',),
+    new Quote(4,'Count your age by friends', 'Not years. Count your life by smiles, not tears.”John Lennon'),
+    new Quote(5,'Laughter is timeless', 'Imagination has no age. And dreams are forever.” Walt Disney'),
+    new Quote(6,'There is only one thing that makes a dream impossible to achieve', 'The fear of failure.”Paulo Coelho'),
   ];
   toggleDetails(index:any){
     this.goals[index].showDescription = !this.goals[index].showDescription;
