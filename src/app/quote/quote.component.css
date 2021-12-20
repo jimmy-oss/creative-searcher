@@ -1,38 +1,38 @@
 * {
-  scroll-behavior: smooth;
-  font-family:  'Reggae One';
+ scroll-behavior: smooth;
+font-family:  'Reggae One';
 } 
 body{
-  background: #ff00cc;  
+background: #ff00cc;  
 background: -webkit-linear-gradient(to right, #333399, #ff00cc);  
 background: linear-gradient(to right, #333399, #ff00cc);  
-  background-size: cover;
-  height: 180vh; 
- background-attachment: scroll;
+background-size: cover;
+height: 180vh; 
+background-attachment: scroll;
 }
 h1{
-  text-align: center;
-  color: white;
+text-align: center;
+color: white;
 }
 li{
-  color: white;
-  text-shadow: 1px 1px black;
-  font-size: 18px;
-  list-style: none;  
+color: white;
+text-shadow: 1px 1px black;
+font-size: 18px;
+list-style: none;  
 }
 p{
-  font-size: 20px;
-  position:fixed;
-  margin-top: 4rem;
-  margin-right: 5rem;
+font-size: 20px;
+position:fixed;
+margin-top: 4rem;
+margin-right: 5rem;
  
 }
 app-quote-detail{
- color: rgba(255, 255, 255, 0.945);
- text-shadow: 1px black;
-  font-size: 20px;
+color: rgba(255, 255, 255, 0.945);
+text-shadow: 1px black;
+font-size: 20px;
 }
 
-.col-md-6 hr{
-  color: grey;
+ hr{
+line-height: 4rem;
 }
