@@ -4,7 +4,7 @@
   <form>
       <div class="form-group">
           <label for="name">Name</label>
-          <input type="text" required class="form-control" id="name" [(ngModel)]="newGoal.name" name="name" autocomplete="off">
+          <input type="text" required class="form-control" id="name" [(ngModel)]="newGoal.name" name="name" #name='ngModel' autocomplete="off" required>
           <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
             <p>Name is required</p>
           </div>
@@ -13,15 +13,17 @@
       </div>
       <div class="form-group">
           <label for="description">Description</label>
-          <textarea class="form-control" id="description" rows="4" required autocomplete="off"></textarea>
+          <textarea class="form-control" id="description" rows="4" [(ngModel)]="newGoal.description" name="description" #description="ngModel" autocomplete="off" required></textarea>
           <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
             <p>Description is required</p>
+          </div>
       </div>
       <div class="form-group">
           <label for="complete"></label>
-          <input type='date' id="complete" required>
+          <input type='date' id="complete" (ngModel)="newGoal.completeDate" name="completeDate" #completeDate="ngModel" required>
           <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
             <p>Date is required</p>
+          </div>
       </div>
       <button type="submit" class="btn btn-success">Add Quote</button>
   </form>
