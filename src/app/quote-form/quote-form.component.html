@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <h2 class="text-center">Create a new Quote</h2>
   <hr>
-  <form>
+  <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
       <div class="form-group">
           <label for="name">Name</label>
           <input type="text" required class="form-control" id="name" [(ngModel)]="newGoal.name" name="name" #name='ngModel' autocomplete="off" required>

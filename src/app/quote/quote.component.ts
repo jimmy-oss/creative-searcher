@@ -14,6 +14,13 @@ export class QuoteComponent implements OnInit {
     new Quote(4,'Count your age by friends', 'Not years. Count your life by smiles, not tears. John Lennon',new Date(2022,0,18)),
     new Quote(5,'Laughter is timeless', 'Imagination has no age. And dreams are forever.” Walt Disney',new Date(2022,2,14)),
   ];
+  
+  addNewQuote (goal: Quote){
+    let goalLength = this.goals.length;
+    goal.id = goalLength+1;
+    goal.completeDate = new Date(goal.completeDate)
+    this.goals.push(goal)
+  }
   toggleDetails(index:any){
     this.goals[index].showDescription = !this.goals[index].showDescription;
   }
