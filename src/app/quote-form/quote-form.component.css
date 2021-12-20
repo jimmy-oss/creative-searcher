@@ -1,0 +1,12 @@
+label{
+  color: white;
+  font-size: 18px;
+}
+h2{
+  color: white;
+}
+  .form-control{
+   font-size: 18px;
+   resize: none;
+   background-color: rgba(255, 255, 255, 0.863);
+ }
