@@ -15,8 +15,14 @@ li{
 p{
   color: rgb(60, 255, 245);
   text-shadow: 1px 1px black;
-  font-size: 18px;
+  font-size: 20px;
 }
 app-quote-detail{
   color: aquamarine;
+  text-shadow: 1px 1px black;
+  font-size: 20px;
+}
+
+.col-md-6 hr{
+  color: grey;
 }

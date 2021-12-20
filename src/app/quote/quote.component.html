@@ -4,22 +4,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./quote.component.css">
-  <title>Goals</title>
+  <title>Quotes</title>
 </head>
 <body>
-  <div>
-    <h1>My Goals</h1>
+    <h1>Quotes</h1>
     <hr>
     <ul>
+      <div class="row">
+        <div class="col-md-6">
       <div *ngFor='let goal of goals;let i = index'>
         <li>{{goal.name}}</li>
+        <div>
         <button (click)='toggleDetails(i)' class="btn btn-primary">Show Details</button>
-        <app-quote-detail *ngIf='goal.showDescription' [quote]='goal'></app-quote-detail>
+       <app-quote-detail *ngIf='goal.showDescription' [quote]='goal' (isComplete) = 'deleteGoal($event,i)'></app-quote-detail>
       </div>
-    </ul>
-    <p *ngIf='goals.length > 5'>You have too many goals</p>
+    </div>
   </div>
-</body>
-</html>
+    <div class="col-md-6">
+      <app-quote-form></app-quote-form>
+    </div>
+  </div>
+ 
+ 
 
