@@ -1,5 +1,17 @@
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link rel="stylesheet" href="./quote-detail.component.css">
 <p>
   {{quote.description}}
 </p>
 <button (click)= 'goalComplete(true)' class="btn btn-danger">Delete</button>
-<p>This quote will be complete in {{quote.completeDate|dateCount}} days</p>
+<button class="btn-info"
+  (click)="upVoteButtonClick()">
+  <i class="fa fa-thumbs-up"></i>&nbsp; &nbsp; {{ numberOfUpVotes }}
+</button>
+<button class="btn-warning"
+  (click)="downVoteButtonClick()">
+  <i class="fa fa-thumbs-down"></i>&nbsp; &nbsp;
+  {{ numberOfDownVotes }}
+</button>
+ <p>This quote will be complete in {{quote.completeDate|dateCount}} days</p>
+ 

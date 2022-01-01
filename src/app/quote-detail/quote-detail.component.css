@@ -1,0 +1,19 @@
+.btn-info{
+  border-radius: 15px; 
+  border: none; 
+  width: 100px; 
+  height: 40px; 
+  margin-left: 1rem;
+  justify-content: space-between;
+}
+.btn-warning{
+  border-radius: 15px; 
+  border: none; 
+  width: 100px; 
+  height: 40px;
+  justify-content: space-between;
+}
+.btn-info,.btn-warning{
+  margin-bottom: 1rem;
+}
+ 
