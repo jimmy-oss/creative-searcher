@@ -3,6 +3,7 @@
   border: none; 
   width: 100px; 
   height: 40px; 
+  margin-left: 0.1rem;
   justify-content: space-between;
 }
 .btn-warning{

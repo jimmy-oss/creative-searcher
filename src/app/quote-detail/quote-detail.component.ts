@@ -19,13 +19,13 @@ export class QuoteDetailComponent implements OnInit {
 
   upVoteButtonClick() {
     this.numberOfUpVotes++;
+    alert("This quote is inspirational😊");
   }
-
   downVoteButtonClick() {
     this.numberOfDownVotes--;
+    alert("This quote is terrible😰");
   }
   constructor() { }
-
   ngOnInit(): void {
   }
 

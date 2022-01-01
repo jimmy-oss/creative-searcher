@@ -1,6 +1,6 @@
 * {
  scroll-behavior: smooth;
-font-family:  'Reggae One';
+ font-family:  'Reggae One';
 } 
 body{
 background: #ff00cc;  
@@ -32,7 +32,16 @@ text-shadow: 1px black;
 font-size: 20px;
 }
 
- hr{
+hr{
 border-style: solid;
 border-width: 1px;
+}
+h5{
+  color:white;
+  margin-left: 18rem;
+}
+h3{
+  color: white;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
 }
