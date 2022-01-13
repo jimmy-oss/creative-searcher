@@ -24,7 +24,8 @@ export class QuoteDetailComponent implements OnInit {
   downVoteButtonClick() {
     this.numberOfDownVotes--;
     alert("This quote is terrible😰");
-  }
+  } 
+ 
   constructor() { }
   ngOnInit(): void {
   }
