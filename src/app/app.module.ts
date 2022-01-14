@@ -8,6 +8,7 @@ import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { DateCountPipe } from './date-count.pipe';
 import { QuoteService } from './quote-service/quote.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,11 +18,13 @@ import { QuoteService } from './quote-service/quote.service';
     QuoteFormComponent,
     DateCountPipe,
     
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [QuoteService],
   bootstrap: [AppComponent],

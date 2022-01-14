@@ -2,7 +2,8 @@
  import { Quote } from '../quote';
  import { QuoteService } from '../quote-service/quote.service';
  import { AlertService } from '../alert-service/alert.service';
- 
+ import { Quotes } from '../quotes-class/quotes';
+ import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-quote',
@@ -14,7 +15,8 @@
 export class QuoteComponent implements OnInit {
      goals!: Quote[];
      alertService!: AlertService;
-     constructor(goalService:QuoteService, alertService:AlertService){
+     quotes!:Quotes;
+     constructor(goalService:QuoteService, alertService:AlertService,private http:HttpClient){
       this.goals = goalService.getGoals()
       this.alertService = alertService;
     }
@@ -44,7 +46,18 @@ export class QuoteComponent implements OnInit {
   }
  
  
-  ngOnInit(): void {
-  }
+  ngOnInit(){
+    interface ApiResponse{
+      author:string;
+      quote:string;
+    }
 
+    this.http.get<ApiResponse>("http://quotes.stormconsultancy.co.uk/random.json").subscribe(data=>{
+      // Succesful API request
+      this.quotes = new Quotes(data.author, data.quote)
+    },err=>{
+      this.quotes = new Quotes("Winston Churchill","Never never give up!")
+      console.log("An error occurred")
+  })
+}
 }

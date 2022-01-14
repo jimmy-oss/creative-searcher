@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,10 +23,17 @@
       </div>
     </div>
   </div>
+  
     <div class="col-md-6">
       <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
-  </div>
+      </div>
+        <blockquote class="blockquote text-center">
+          <p class="mb-0" style="color: white; margin-left: 12rem; margin-top: -12rem; " >{{quotes.quote}}</p>
+          <footer class="blockquote-footer" ><cite style="color: aliceblue;"><p style="margin-left: 28rem; top: 12rem;">{{quotes.author}}</p></cite></footer>
+        </blockquote>
+    
  
+    
  
-
+    

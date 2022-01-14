@@ -45,3 +45,7 @@ h3{
   margin-left: 2rem;
   margin-bottom: 1rem;
 }
+.blockquote text-center{
+  z-index: 1000;
+  color: white;
+}
