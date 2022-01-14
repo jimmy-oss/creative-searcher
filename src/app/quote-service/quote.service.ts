@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Quote } from '../quote';
+import { goals } from '../quotelist';
 
 @Injectable({
   providedIn: 'root'
 })
 export class QuoteService {
-
+  
   getGoals(){
-    return Quote
+    return goals
   }
   constructor() { }
 }

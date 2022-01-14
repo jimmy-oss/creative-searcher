@@ -1,17 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+ import { Component, OnInit } from '@angular/core';
+ import { Quote } from '../quote';
+ import { QuoteService } from '../quote-service/quote.service';
+ 
 
 @Component({
   selector: 'app-quote',
   templateUrl: './quote.component.html',
-  styleUrls: ['./quote.component.css']
+  styleUrls: ['./quote.component.css'],
+  providers:[QuoteService],
+ 
 })
-
-  addNewQuote (goal: Quote){
-    let goalLength = this.goals.length;
-    goal.id = goalLength+1;
-    goal.completeDate = new Date(goal.completeDate)
-    this.goals.push(goal)
-  }
+export class QuoteComponent implements OnInit {
+     goals!: Quote[];
+     constructor(goalService:QuoteService) {
+      this.goals = goalService.getGoals()
+    }
+     addNewQuote (goal: Quote){
+      let goalLength = this.goals.length;
+      goal.id = goalLength+1;
+      goal.completeDate = new Date(goal.completeDate)
+      this.goals.push(goal)
+    }
   toggleDetails(index:any){
     this.goals[index].showDescription = !this.goals[index].showDescription;
   }
@@ -29,7 +38,7 @@ import { Component, OnInit } from '@angular/core';
       }
     }
   }
-  constructor() { }
+ 
 
   ngOnInit(): void {
   }
