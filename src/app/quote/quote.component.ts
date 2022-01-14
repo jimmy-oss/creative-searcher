@@ -1,6 +1,7 @@
  import { Component, OnInit } from '@angular/core';
  import { Quote } from '../quote';
  import { QuoteService } from '../quote-service/quote.service';
+ import { AlertService } from '../alert-service/alert.service';
  
 
 @Component({
@@ -12,8 +13,10 @@
 })
 export class QuoteComponent implements OnInit {
      goals!: Quote[];
-     constructor(goalService:QuoteService) {
+     alertService!: AlertService;
+     constructor(goalService:QuoteService, alertService:AlertService){
       this.goals = goalService.getGoals()
+      this.alertService = alertService;
     }
      addNewQuote (goal: Quote){
       let goalLength = this.goals.length;
@@ -35,11 +38,12 @@ export class QuoteComponent implements OnInit {
 
       if (toDelete){
         this.goals.splice(index,1)
+        this.alertService.alertMe("This quote has been deleted🤗")
       }
     }
   }
  
-
+ 
   ngOnInit(): void {
   }
 
