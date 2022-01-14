@@ -9,6 +9,8 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { DateCountPipe } from './date-count.pipe';
 import { QuoteService } from './quote-service/quote.service';
 import { HttpClientModule } from '@angular/common/http';
+import { NgProgressModule } from '@ngx-progressbar/core';
+import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    NgProgressModule.forRoot(),
+    NgProgressHttpClientModule,
   ],
   providers: [QuoteService],
   bootstrap: [AppComponent],
